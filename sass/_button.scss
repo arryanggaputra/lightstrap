@@ -13,6 +13,12 @@
     font-size: $font-size-base;
     font-family: $font-family-base;
 
+    &.large {
+        font-size: $font-size-base + 6;
+        padding: 8px 20px;
+        border-radius: $border-radius-large;
+    }
+
     &.default {
         @include button-variation($black-color, $default, $default)
     }
