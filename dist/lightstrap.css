@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+body {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif; }
+
+.btn {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 3px; }
+  .btn.default {
+    background: #FFF;
+    border: 2px solid #ededed;
+    color: #111;
+    text-decoration: none; }
+    .btn.default:hover {
+      background: #ededed; }
+    .btn.default.outline {
+      color: #FFF;
+      background: none !important; }
+  .btn.primary {
+    background: #303F9F;
+    border: 2px solid #283484;
+    color: #fff;
+    text-decoration: none; }
+    .btn.primary:hover {
+      background: #283484; }
+    .btn.primary.outline {
+      color: #303F9F;
+      background: none !important; }
+  .btn.success {
+    background: #8BC34A;
+    border: 2px solid #79af3a;
+    color: #fff;
+    text-decoration: none; }
+    .btn.success:hover {
+      background: #79af3a; }
+    .btn.success.outline {
+      color: #8BC34A;
+      background: none !important; }
+  .btn.warning {
+    background: #FFC107;
+    border: 2px solid #e2aa00;
+    color: #fff;
+    text-decoration: none; }
+    .btn.warning:hover {
+      background: #e2aa00; }
+    .btn.warning.outline {
+      color: #FFC107;
+      background: none !important; }
+  .btn.danger {
+    background: #C00;
+    border: 2px solid #a80000;
+    color: #fff;
+    text-decoration: none; }
+    .btn.danger:hover {
+      background: #a80000; }
+    .btn.danger.outline {
+      color: #C00;
+      background: none !important; }
+
+/*# sourceMappingURL=lightstrap.css.map */

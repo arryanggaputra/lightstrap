@@ -1,0 +1,13 @@
+@mixin button-variation($color, $background, $border) {
+    background: $background;
+    border: 2px solid darken($border, 7%);
+    color: $color;
+    text-decoration: none;
+    &:hover {
+        background: darken($background, 7%);
+    }
+    &.outline {
+        color: $background;
+        background: none !important;
+    }
+}
