@@ -2,12 +2,19 @@
     background: $background;
     border: 2px solid darken($border, 7%);
     color: $color;
-    text-decoration: none;
+    
     &:hover {
         background: darken($background, 7%);
     }
+    &:focus {
+        outline: none;
+    }
     &.outline {
-        color: $background;
+        color: darken($border, 7%);
         background: none !important;
+        &:focus, &:hover {
+            color: $color;
+            background: darken($background, 7%) !important;
+        }
     }
 }

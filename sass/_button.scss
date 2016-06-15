@@ -1,9 +1,23 @@
 .btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;    
     display: inline-block;
-    padding: 7px 12px;
+    padding: 6px 15px;
     border-radius: $border-radius-default;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+
     &.default {
         @include button-variation($black-color, $default, $default)
+    }
+    &.black {
+        @include button-variation($white-color, $black, $black)
     }
     &.primary {
         @include button-variation($white-color, $primary, $primary)
