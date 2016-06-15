@@ -1,0 +1,18 @@
+.alert {
+    padding: 15px;
+    border-radius: $border-radius-default;
+    margin: 15px 0px;
+
+    &.info {
+        @include alert-variation($primary, $info-alert-bg, $primary)
+    }
+    &.success {
+        @include alert-variation($success, $success-alert-bg, $success)
+    }
+    &.warning {
+        @include alert-variation($warning, $warning-alert-bg, $warning)
+    }
+    &.danger {
+        @include alert-variation($danger, $danger-alert-bg, $danger)
+    }
+}

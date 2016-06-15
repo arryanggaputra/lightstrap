@@ -146,4 +146,25 @@ h5 {
 h6 {
   font-size: .8em; }
 
+.alert {
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0px; }
+  .alert.info {
+    background: #B7D9F7;
+    border: 1px solid #97c8f3;
+    color: #242f78; }
+  .alert.success {
+    background: #DFF0D8;
+    border: 1px solid #cae6be;
+    color: #71a436; }
+  .alert.warning {
+    background: #FCF8E3;
+    border: 1px solid #f9f0c3;
+    color: #d39e00; }
+  .alert.danger {
+    background: #F2DEDE;
+    border: 1px solid #e8c4c4;
+    color: #990000; }
+
 /*# sourceMappingURL=lightstrap.css.map */

@@ -1,0 +1,5 @@
+@mixin alert-variation($color, $background, $border) {
+    background: $background;
+    border: 1px solid darken($background, 7%);
+    color: darken($color, 10%);    
+}
