@@ -24,14 +24,14 @@ body {
     border-radius: 5px; }
   .btn.default {
     background: #FFF;
-    border: 2px solid #ededed;
+    border: 2px solid black;
     color: #111; }
     .btn.default:hover {
       background: #ededed; }
     .btn.default:focus {
       outline: none; }
     .btn.default.outline {
-      color: #ededed;
+      color: black;
       background: none !important; }
       .btn.default.outline:focus, .btn.default.outline:hover {
         color: #111;
@@ -106,5 +106,22 @@ body {
       .btn.danger.outline:focus, .btn.danger.outline:hover {
         color: #fff;
         background: #a80000 !important; }
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left; }
+  .table th, .table td {
+    border-bottom: 2px #d1d1d1 solid;
+    padding: 8px 12px; }
+  .table td {
+    border-bottom: 1px #d4d4d4 solid; }
+  .table.table-striped tbody tr:nth-child(2n+1) {
+    background-color: #f3f3f3; }
+  .table.table-bordered {
+    border: 1px #CCC solid; }
+    .table.table-bordered td, .table.table-bordered th {
+      border: 1px #CCC solid; }
 
 /*# sourceMappingURL=lightstrap.css.map */

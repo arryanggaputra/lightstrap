@@ -20,7 +20,7 @@
     }
 
     &.default {
-        @include button-variation($black-color, $default, $default)
+        @include button-variation($black-color, $default, $black)
     }
     &.black {
         @include button-variation($white-color, $black, $black)
