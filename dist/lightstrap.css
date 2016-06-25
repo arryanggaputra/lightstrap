@@ -18,6 +18,9 @@ body {
   vertical-align: middle;
   font-size: 14px;
   font-family: "Open Sans", sans-serif; }
+  .btn::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
   .btn.large {
     font-size: 20px;
     padding: 8px 20px;

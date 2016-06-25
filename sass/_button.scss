@@ -12,7 +12,10 @@
     vertical-align: middle;
     font-size: $font-size-base;
     font-family: $font-family-base;
-
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
     &.large {
         font-size: $font-size-base + 6;
         padding: 8px 20px;
