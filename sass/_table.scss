@@ -4,14 +4,14 @@
     border-collapse: collapse;
     text-align:left;
     th,td{
-        border-bottom:2px lighten(#CCC, 2%) solid;
+        border-bottom:2px #d1d1d1 solid;
         padding:8px 12px;
     }
     td{
-        border-bottom:1px lighten(#CCC, 3%) solid;
+        border-bottom:1px #d4d4d4 solid;
     }
     &.table-striped tbody tr:nth-child(2n+1) {
-      background-color: lighten(#EEE, 2%);
+      background-color: #f3f3f3;
     }
     &.table-bordered{
         border:1px #CCC solid;
