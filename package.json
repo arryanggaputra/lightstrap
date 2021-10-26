@@ -1,0 +1,12 @@
+{
+  "name": "lightstrap",
+  "version": "1.0.0",
+  "description": "LightStrap is a Tailwind UI Kit with boostrap compatibility",
+  "main": "index.js",
+  "author": "arryanggaputra@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "tailwindcss": "^2.2.17"
+  }
+}
