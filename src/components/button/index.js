@@ -3,26 +3,27 @@ const buttons = {
     "@apply px-3 py-2 focus:ring-4 rounded-md border": {},
   },
   ".btn-primary": {
-    "@apply text-white bg-primary focus:ring-opacity-40 focus:ring-primary border-primary":
+    "@apply text-white bg-primary hover:bg-primary-dark focus:ring-opacity-40 focus:ring-primary border-primary":
       {},
   },
   ".btn-secondary": {
-    "@apply text-white bg-secondary focus:ring-opacity-40 focus:ring-secondary border-secondary":
+    "@apply text-white bg-secondary hover:bg-secondary-dark focus:ring-opacity-40 focus:ring-secondary border-secondary":
       {},
   },
   ".btn-success": {
-    "@apply text-white bg-success focus:ring-opacity-40 focus:ring-success border-success":
+    "@apply text-white bg-success hover:bg-success-dark focus:ring-opacity-40 focus:ring-success border-success":
       {},
   },
   ".btn-danger": {
-    "@apply text-white bg-danger focus:ring-opacity-40 focus:ring-danger border-danger":
+    "@apply text-white bg-danger hover:bg-danger-dark focus:ring-opacity-40 focus:ring-danger border-danger":
       {},
   },
   ".btn-info": {
-    "@apply bg-info focus:ring-opacity-40 focus:ring-info border-info": {},
+    "@apply bg-info hover:bg-info-dark focus:ring-opacity-40 focus:ring-info border-info":
+      {},
   },
   ".btn-warning": {
-    "@apply bg-warning focus:ring-opacity-40 focus:ring-warning border-warning":
+    "@apply bg-warning hover:bg-warning-dark focus:ring-opacity-40 focus:ring-warning border-warning":
       {},
   },
   ".btn-light": {

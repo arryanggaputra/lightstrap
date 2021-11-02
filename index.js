@@ -16,21 +16,27 @@ module.exports = plugin.withOptions(
           colors: {
             primary: {
               DEFAULT: colors.blue[700],
+              dark: colors.blue[800],
             },
             secondary: {
               DEFAULT: colors.gray[500],
+              dark: colors.gray[600],
             },
             success: {
               DEFAULT: colors.green[700],
+              dark: colors.green[800],
             },
             danger: {
               DEFAULT: colors.red[600],
+              dark: colors.red[700],
             },
             warning: {
               DEFAULT: colors.yellow[400],
+              dark: colors.yellow[500],
             },
             info: {
-              DEFAULT: "#0dc9f0",
+              DEFAULT: colors.lightBlue[400],
+              dark: colors.lightBlue[500],
             },
           },
         },
