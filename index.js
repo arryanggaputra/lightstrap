@@ -1,11 +1,13 @@
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
+const alert = require("./src/components/alert");
 const buttons = require("./src/components/button");
 
 module.exports = plugin.withOptions(
   () => {
     return function ({ addComponents }) {
+      addComponents(alert);
       addComponents(buttons);
     };
   },
