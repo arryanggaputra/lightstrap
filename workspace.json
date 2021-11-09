@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "lightstrap-ui": "apps/lightstrap-ui",
+    "lightstrap-ui-e2e": "apps/lightstrap-ui-e2e"
+  }
+}
