@@ -1,0 +1,34 @@
+{
+  "root": "libs/lightstrap",
+  "sourceRoot": "libs/lightstrap/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/lightstrap/**/*.js"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/lightstrap"],
+      "options": {
+        "jestConfig": "libs/lightstrap/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lightstrap",
+        "tsConfig": "libs/lightstrap/tsconfig.lib.json",
+        "packageJson": "libs/lightstrap/package.json",
+        "main": "libs/lightstrap/src/index.js",
+        "assets": ["libs/lightstrap/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

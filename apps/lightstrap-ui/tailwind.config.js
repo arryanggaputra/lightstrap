@@ -1,5 +1,4 @@
 const { join } = require('path');
-// const lightstrap = require('../../libs/lightstrap/src');
 
 module.exports = {
   purge: [join(__dirname, './**/*.{js,ts,jsx,tsx}')],
@@ -11,5 +10,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('../../libs/lightstrap/src')],
 };
