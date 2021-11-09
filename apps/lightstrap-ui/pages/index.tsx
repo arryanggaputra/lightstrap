@@ -14,6 +14,9 @@ export function Index() {
       <Link href="/alert">
         <a className="btn btn-primary">alert</a>
       </Link>
+      <Link href="/alert">
+        <a className="btn btn-primary">badge</a>
+      </Link>
     </div>
   );
 }
