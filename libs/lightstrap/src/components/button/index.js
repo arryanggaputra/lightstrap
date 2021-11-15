@@ -1,6 +1,6 @@
 const buttons = {
   '.btn': {
-    '@apply px-3 py-2 focus:ring-4 rounded-md border': {},
+    '@apply px-3 py-2 focus:ring-4 rounded-md border inline-block': {},
   },
   '.btn-primary': {
     '@apply text-white bg-primary hover:bg-primary-dark focus:ring-opacity-40 focus:ring-primary border-primary':
