@@ -1,9 +1,6 @@
 name: Publish NPM Package
 
 on:
-  push:
-    branches:
-      - master
   release:
     types: [created]
 
