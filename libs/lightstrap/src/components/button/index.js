@@ -1,33 +1,35 @@
+let variants = ['primary', 'secondary', 'success', 'danger', 'info', 'warning'];
+
+let buttonVariants = variants.reduce((allVariant, variant) => {
+  let textColor = 'text-black';
+  if (!['warning', 'info'].includes(variant)) {
+    textColor = 'text-white';
+  }
+
+  allVariant[`.btn-${variant}`] = {
+    [`@apply ${textColor} bg-${variant} hover:bg-${variant}-dark focus:ring-opacity-40 focus:ring-${variant} border-${variant}`]:
+      {},
+    [`&.active`]: {
+      [`@apply bg-${variant}-dark`]: {},
+    },
+  };
+
+  allVariant[`.btn-outline-${variant}`] = {
+    [`@apply hover:bg-${variant} hover:${textColor} text-${variant} focus:ring-${variant} focus:ring-opacity-40  border-${variant}`]:
+      {},
+  };
+
+  return allVariant;
+}, {});
+
 const buttons = {
   '.btn': {
-    '@apply px-3 py-2 focus:ring-4 rounded-md border inline-block': {},
-  },
-  '.btn-primary': {
-    '@apply text-white bg-primary hover:bg-primary-dark focus:ring-opacity-40 focus:ring-primary border-primary':
+    '@apply text-black px-3 py-2 focus:ring-4 rounded-md border inline-block':
       {},
-  },
-  '.btn-secondary': {
-    '@apply text-white bg-secondary hover:bg-secondary-dark focus:ring-opacity-40 focus:ring-secondary border-secondary':
-      {},
-  },
-  '.btn-success': {
-    '@apply text-white bg-success hover:bg-success-dark focus:ring-opacity-40 focus:ring-success border-success':
-      {},
-  },
-  '.btn-danger': {
-    '@apply text-white bg-danger hover:bg-danger-dark focus:ring-opacity-40 focus:ring-danger border-danger':
-      {},
-  },
-  '.btn-info': {
-    '@apply bg-info hover:bg-info-dark focus:ring-opacity-40 focus:ring-info border-info':
-      {},
-  },
-  '.btn-warning': {
-    '@apply bg-warning hover:bg-warning-dark focus:ring-opacity-40 focus:ring-warning border-warning':
-      {},
-  },
-  '.btn-light': {
-    '@apply bg-gray-100 border-gray-100 focus:ring-gray-200': {},
+    [`&.disabled, &:disabled`]: {
+      [`@apply pointer-events-none bg-opacity-25 border-opacity-5 text-opacity-75`]:
+        {},
+    },
   },
   '.btn-dark': {
     '@apply text-white bg-black focus:ring-opacity-40 focus:ring-black border-black':
@@ -41,30 +43,6 @@ const buttons = {
   /**
    * button outline
    */
-  '.btn-outline-primary': {
-    '@apply hover:bg-primary hover:text-white text-primary focus:ring-primary focus:ring-opacity-40  border-primary':
-      {},
-  },
-  '.btn-outline-secondary': {
-    '@apply hover:bg-secondary hover:text-white text-secondary focus:ring-secondary focus:ring-opacity-40 border-secondary':
-      {},
-  },
-  '.btn-outline-success': {
-    '@apply hover:bg-success hover:text-white text-success focus:ring-success focus:ring-opacity-40 border-success':
-      {},
-  },
-  '.btn-outline-danger': {
-    '@apply hover:bg-danger hover:text-white text-danger focus:ring-danger focus:ring-opacity-40 border-danger':
-      {},
-  },
-  '.btn-outline-info': {
-    '@apply hover:bg-info hover:text-black text-info focus:ring-info focus:ring-opacity-40 border-info':
-      {},
-  },
-  '.btn-outline-warning': {
-    '@apply hover:bg-warning hover:text-black text-warning focus:ring-warning focus:ring-opacity-40 border-warning':
-      {},
-  },
   '.btn-outline-light': {
     '@apply hover:bg-gray-100 hover:text-black text-gray-100 focus:ring-gray-200 focus:ring-opacity-40 border-gray-100':
       {},
@@ -81,6 +59,8 @@ const buttons = {
   '.btn-sm': {
     '@apply text-xs py-[0.25rem] px-[0.5rem] rounded-[0.2rem]': {},
   },
+
+  ...buttonVariants,
 };
 
 module.exports = buttons;
