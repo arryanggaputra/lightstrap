@@ -11,6 +11,9 @@ export function Index() {
       <Link href="/button">
         <a className="btn btn-primary">Button</a>
       </Link>
+      <Link href="/button-group">
+        <a className="btn btn-primary">Button Group</a>
+      </Link>
       <Link href="/alert">
         <a className="btn btn-primary">alert</a>
       </Link>
