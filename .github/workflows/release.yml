@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+
       - name: Install jq yq
         run: |
           sudo wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -O /usr/bin/jq &&\
@@ -24,13 +25,31 @@ jobs:
           sudo pip install yq
           jq --version
           yq --version
+
       - name: Install gitmoji-semver
         run: |
           git clone https://github.com/nkmr-jp/gitmoji-semver -b v2.0.0
+
       - name: Generate semantic-release configs
         working-directory: ./gitmoji-semver
         run: |
           make scaffold F=../.semver.yml O=..
+
+      - name: 'Automated Version Bump Project'
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          skip-tag: 'true'
+
+      - name: 'Automated Version Bump For library'
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGEJSON_DIR: 'libs/lightstrap'
+        with:
+          skip-tag: 'true'
+
       - name: Release
         working-directory: ./.release
         env:
